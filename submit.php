@@ -3,7 +3,7 @@
 	include('common.php');
 	
 	if(isset($_POST['name'])){
-		$stmt = $db->prepare("INSERT INTO applications (name, email, phone, social, weight, address_line1, address_line2, city, state, zip, trip_start, trip_end) VALUES (:name, :email, :phone, :social, :weight, :address_line1, :address_line2, :city, :state, :zip, :trip_start, :trip_end, :status)");
+		$stmt = $db->prepare("INSERT INTO applications (name, email, phone, social, weight, address_line1, address_line2, city, state, zip, trip_start, trip_end, status) VALUES (:name, :email, :phone, :social, :weight, :address_line1, :address_line2, :city, :state, :zip, :trip_start, :trip_end, :status)");
 		$stmt->bindParam(':name', $name);
 		$stmt->bindParam(':email', $email);
 		$stmt->bindParam(':phone', $phone);
@@ -23,22 +23,25 @@
 		$name = $_POST['name'];
 		$email = $_POST['email'];
 		$phone = $_POST['phone'];
-		$social = $_POST['ssn'];
+		$social = preg_replace('/[^0-9]/', '', $_POST['ssn']);
 		$weight = $_POST['weight'];
 		$address_line1 = $_POST['address_line1'];
-		if(isset($_POST['address_line2'])){$address_line2 = $_POST['address_line2 '];}
+		if(isset($_POST['address_line2'])){
+			$address_line2 = $_POST['address_line2'];
+		}
+		else{$address_line2 = '';}
 		$city = $_POST['city'];
 		$state = $_POST['state'];
 		$zip = $_POST['zip'];
 		$trip_start = $_POST['tripStart'];
 		$trip_end = $_POST['tripEnd'];
-		$status = 'Received';
-		$stmt->execute();
+		$status = $_POST['status'];
+		
+		$result = $stmt->execute(); 
 	}
 	else{
 		// no post data
 	}
-
 	
 	include('head.php');
 ?>

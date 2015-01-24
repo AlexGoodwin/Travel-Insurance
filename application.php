@@ -54,8 +54,8 @@
 		<option <? if($results['status'] == 'Complete') echo 'selected="selected"';?>>Complete</option>
 	</select>
 	
-	<label for="notes">Note: </label>
-	<textarea name="notes"></textarea>
+	<label for="notes">Notes: </label>
+	<textarea name="notes"><? echo $results['notes'];?></textarea>
 	
 	<input type="submit" value="Save">
 </form>

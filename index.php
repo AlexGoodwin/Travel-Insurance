@@ -63,6 +63,8 @@
 			        
 			        <div class="clearfix"></div>
 			        
+			        <input type="hidden" name="status" value="Received">
+			        
 			        <div class="grid-60 prefix-20">
 				        <input type='submit' value="Get A Quote">
 			        </div>

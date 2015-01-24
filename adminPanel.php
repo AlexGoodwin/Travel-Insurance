@@ -40,7 +40,9 @@
 				<? 
 					$query = " 
 			            SELECT id, name, status
-			            FROM applications 
+			            FROM applications
+			            ORDER BY id
+			            DESC
 			        "; 
 			         
 		            // Execute the query against the database 
@@ -90,6 +92,7 @@
 				if(success){
 					$(this).siblings().css({background: 'transparent', color: '#111'});
 					$(this).css({background: '#4a85d1', color: 'white'});
+					$(this).children(':last').css({color: '#111'});
 					resetHandlers();
 				}
 			});

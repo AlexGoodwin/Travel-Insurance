@@ -118,7 +118,7 @@ header{
 	
 	nav{
 		text-align: right;
-		padding-top: 40px;
+		padding: 40px;
 		z-index: 2;
 		width: 100%;
 		max-width: 1200px;
@@ -130,11 +130,15 @@ header{
 			padding: 10px 20px;
 			text-decoration: none;
 			margin: 0 10px;
-			box-shadow: none;
+			text-shadow: none;
 		}
 		
 		a:hover{
 			background: $dark_highlight;
+		}
+		
+		a.left{
+			float: left;
 		}
 	}
 	
@@ -397,6 +401,7 @@ header{
 					height: 34px;
 					-webkit-appearance: none;
 					margin-bottom: 20px;
+					display: block;
 				}
 				
 				input[type=submit]{
