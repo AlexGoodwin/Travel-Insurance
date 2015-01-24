@@ -12,6 +12,74 @@ body, html{
 	box-sizing: inherit;
 }
 
+.error{
+	color: red;
+	border: 1px solid red;
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 0;
+}
+
+.login{
+	header{
+		padding: 40px;
+		min-height: 360px;
+	
+		section{
+			background: white;
+			color: #111;
+			text-shadow: none;
+			padding: 40px;
+			text-align: left;
+			
+			div:nth-child(1){
+				text-align: right;
+			}
+			
+			div:nth-child(2){
+				text-align: left;
+			}
+			
+			img{
+				margin-bottom: 40px;
+			}
+			
+			h2{
+				margin-bottom: 20px;
+				padding: 0;
+			}
+			
+			form{
+				
+				label{
+					display: none;
+				}
+				
+				input{
+					display: block;
+					margin: 20px 0;
+					padding: 10px;
+				}
+				
+				input:first-of-type{
+					margin-top: 0;
+				}
+				
+				input[type=submit]{
+					background: $highlight;
+					color: white;
+					border: none;
+					padding: 10px 20px;
+				}
+				
+				input[type=submit]:hover{
+					background: $dark_highlight;
+				}
+			}
+		}
+	}
+}
+
 header{
 	background: #FFF;
 	background-image: url('../img/clouds.jpg');
@@ -183,6 +251,139 @@ header{
 	}
 }
 
+.adminPanel{
+	header{
+		height: 100px;
+		min-height: 0;
+		background: $dark_highlight;
+		color: white;
+		text-shadow: none;
+		text-align: left;
+		
+		h1{
+			padding: 0 40px;
+			margin: 0;
+			font-size: 3em;
+			line-height: 100px;
+			display: inline-block;
+			font-weight: 200;
+		}
+		
+		a{
+			display: inline-block;
+			float: right;
+			margin: 33px 40px 0 0;
+			color: white;
+			border: 1px solid white;
+			padding: 5px 10px;
+		}
+		
+		a:hover{
+			background: $highlight;
+		}
+	}
+	
+	section{
+		div.applications{
+			border: 1px solid #888;
+			border-top: none;
+			padding: 0;
+			max-height: 100%;
+			overflow-y: scroll;
+			background: white;
+			
+			h2{
+				margin: 0;
+				padding: 20px 40px;
+				background: $highlight;
+				color: white;
+				font-weight: 200;
+			}
+			
+			table{
+				width: 100%;
+				
+				tbody{
+					tr{
+						line-height: 3em;
+						border-bottom: 1px solid #888;
+					
+						td:first-of-type{
+							padding: 0 0 0 40px;
+							width: 70px;
+						}
+					}
+					
+					tr:hover{
+						background: rgba(0,0,0,.2);
+						cursor: pointer;
+					}
+				}
+			}
+		}
+		
+		div.app{
+			background: white;
+			min-height: 700px;
+			display: block;
+			
+			$labelWidth: 160px;
+			
+			form{
+				h2{
+					margin: 50px 0 50px $labelWidth;
+				}
+				
+				label{
+					min-width: $labelWidth;
+					float: left;
+					clear: left;
+					text-align: right;
+					padding: 5px 20px 5px 0;
+				}
+				
+				input{
+					display: block;
+					margin-bottom: 20px;
+					padding: 5px;
+					width: 268px;
+				}
+				
+				input:after{
+					content: '\A';
+				    white-space: pre;
+				}
+				
+				select{
+					background: transparent;
+					width: 268px;
+					padding: 5px;
+					font-size: 16px;
+					line-height: 1;
+					border: 1px solid #888;
+					border-radius: 0;
+					height: 34px;
+					-webkit-appearance: none;
+				}
+				
+				input[type=submit]{
+					text-align: center;
+					background: $highlight;
+					border: none;
+					color: #FFF;
+					padding: 20px;
+					margin: 50px 0 50px $labelWidth;
+				}
+				
+				input[type=submit]:hover{
+					background: $dark_highlight;
+				}
+			}
+		}
+	}
+	
+}
+
 @media (screen and max-width: 970px){
 	header{
 		min-height: 600px;
@@ -224,6 +425,30 @@ header{
 			h3{
 				font-size: 1.5em;
 				line-height: 1.5em;
+			}
+		}
+	}
+	
+	.login{
+		header{
+			section{
+				div:nth-child(1){
+					text-align: center;
+				}
+				
+				div:nth-child(2){
+					form{
+						text-align: center;
+						
+						input{
+							margin: 20px auto;
+						}
+						
+						input:first-of-type{
+							margin-top: 0;
+						}
+					}
+				}
 			}
 		}
 	}

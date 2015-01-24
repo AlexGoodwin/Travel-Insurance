@@ -12,7 +12,10 @@
 <!-- Date picker -->
 <script>
 	$(document).ready(function(){
-		$('.fancybox').fancybox();
+		//fancybox
+		$('.fancybox').fancybox({
+			padding: 0
+		});
 		
 		// parallax
 		$(window).scroll(function(){

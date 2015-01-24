@@ -7,6 +7,47 @@ body, html {
 * {
   box-sizing: inherit; }
 
+.error {
+  color: red;
+  border: 1px solid red;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0; }
+
+.login header {
+  padding: 40px;
+  min-height: 360px; }
+  .login header section {
+    background: white;
+    color: #111;
+    text-shadow: none;
+    padding: 40px;
+    text-align: left; }
+    .login header section div:nth-child(1) {
+      text-align: right; }
+    .login header section div:nth-child(2) {
+      text-align: left; }
+    .login header section img {
+      margin-bottom: 40px; }
+    .login header section h2 {
+      margin-bottom: 20px;
+      padding: 0; }
+    .login header section form label {
+      display: none; }
+    .login header section form input {
+      display: block;
+      margin: 20px 0;
+      padding: 10px; }
+    .login header section form input:first-of-type {
+      margin-top: 0; }
+    .login header section form input[type=submit] {
+      background: #4a85d1;
+      color: white;
+      border: none;
+      padding: 10px 20px; }
+    .login header section form input[type=submit]:hover {
+      background: #3966a0; }
+
 header {
   background: #FFF;
   background-image: url("../img/clouds.jpg");
@@ -124,6 +165,93 @@ header {
     padding: 30px 0;
     text-align: center; }
 
+.adminPanel header {
+  height: 100px;
+  min-height: 0;
+  background: #3966a0;
+  color: white;
+  text-shadow: none;
+  text-align: left; }
+  .adminPanel header h1 {
+    padding: 0 40px;
+    margin: 0;
+    font-size: 3em;
+    line-height: 100px;
+    display: inline-block;
+    font-weight: 200; }
+  .adminPanel header a {
+    display: inline-block;
+    float: right;
+    margin: 33px 40px 0 0;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 10px; }
+  .adminPanel header a:hover {
+    background: #4a85d1; }
+.adminPanel section div.applications {
+  border: 1px solid #888;
+  border-top: none;
+  padding: 0;
+  max-height: 100%;
+  overflow-y: scroll;
+  background: white; }
+  .adminPanel section div.applications h2 {
+    margin: 0;
+    padding: 20px 40px;
+    background: #4a85d1;
+    color: white;
+    font-weight: 200; }
+  .adminPanel section div.applications table {
+    width: 100%; }
+    .adminPanel section div.applications table tbody tr {
+      line-height: 3em;
+      border-bottom: 1px solid #888; }
+      .adminPanel section div.applications table tbody tr td:first-of-type {
+        padding: 0 0 0 40px;
+        width: 70px; }
+    .adminPanel section div.applications table tbody tr:hover {
+      background: rgba(0, 0, 0, 0.2);
+      cursor: pointer; }
+.adminPanel section div.app {
+  background: white;
+  min-height: 700px;
+  display: block; }
+  .adminPanel section div.app form h2 {
+    margin: 50px 0 50px 160px; }
+  .adminPanel section div.app form label {
+    min-width: 160px;
+    float: left;
+    clear: left;
+    text-align: right;
+    padding: 5px 20px 5px 0; }
+  .adminPanel section div.app form input {
+    display: block;
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 268px; }
+  .adminPanel section div.app form input:after {
+    content: '\A';
+    white-space: pre; }
+  .adminPanel section div.app form select {
+    background: transparent;
+    width: 268px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 1px solid #888;
+    border-radius: 0;
+    height: 34px;
+    -webkit-appearance: none; }
+  .adminPanel section div.app form input[type=submit] {
+    text-align: center;
+    background: #4a85d1;
+    border: none;
+    color: #FFF;
+    padding: 20px;
+    margin: 50px 0 50px 160px; }
+  .adminPanel section div.app form input[type=submit]:hover {
+    background: #3966a0; }
+
 @media (max-width: 970px) {
   header {
     min-height: 600px; }
@@ -146,6 +274,15 @@ header {
 
   #application section h3 {
     font-size: 1.5em;
-    line-height: 1.5em; } }
+    line-height: 1.5em; }
+
+  .login header section div:nth-child(1) {
+    text-align: center; }
+  .login header section div:nth-child(2) form {
+    text-align: center; }
+    .login header section div:nth-child(2) form input {
+      margin: 20px auto; }
+    .login header section div:nth-child(2) form input:first-of-type {
+      margin-top: 0; } }
 
 /*# sourceMappingURL=style.css.map */
