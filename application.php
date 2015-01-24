@@ -13,7 +13,7 @@
 ?>
 
 <form class="grid-80 prefix-10" method='post' action="adminPanel.php">
-	<h2>Application ID: <? echo $results['id'];?></h2>
+	<h2>Application ID: <? echo $results['id'];?> <a id="delete" title="Delete Application"><i class="fa fa-trash"></i></a></h2>
 	
 	<input type='hidden' name="id" value='<? echo $results['id'];?>'>
 	
@@ -53,6 +53,9 @@
 		<option <? if($results['status'] == 'Contacted') echo 'selected="selected"';?>>Contacted</option>
 		<option <? if($results['status'] == 'Complete') echo 'selected="selected"';?>>Complete</option>
 	</select>
+	
+	<label for="notes">Note: </label>
+	<textarea name="notes"></textarea>
 	
 	<input type="submit" value="Save">
 </form>

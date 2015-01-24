@@ -39,7 +39,7 @@
 				<tbody>
 				<? 
 					$query = " 
-			            SELECT id, name
+			            SELECT id, name, status
 			            FROM applications 
 			        "; 
 			         
@@ -49,9 +49,9 @@
 			        
 			        while($row = $stmt->fetch()){
 				        echo "<tr>";
-				        foreach($row as $key => $value){
-					        echo "<td>".$value."</td>";
-				        }
+				        echo "<td>".$row['id']."</td>";
+				        echo "<td>".$row['name']."</td>";
+				        echo "<td class=".$row['status'].">".$row['status']."</td>";
 				        echo "</tr>";
 			        }
 		        ?>
@@ -69,6 +69,9 @@
 	
 	<script>
 		$(document).ready(function(){
+			resetHandlers();
+			
+			// allow user to click application to get/edit its info
 			$('.applications table tr').click(function(){
 				var id = $(this).children(':first').text();
 				var success = false;
@@ -87,7 +90,30 @@
 				if(success){
 					$(this).siblings().css({background: 'transparent', color: '#111'});
 					$(this).css({background: '#4a85d1', color: 'white'});
+					resetHandlers();
 				}
 			});
 		});
+		
+		function resetHandlers(){
+			$('#delete').click(function(){
+				var conf = confirm('Are you sure you want to delete this application?');
+				if(conf){
+					var id = $('input[name="id"]').val();
+					// delete the application
+					$.ajax({
+				   		url: "deleteApplication.php?id="+id,
+						type: 'get',
+						async: false,
+						success: function(response){
+							// refresh
+							window.location = 'adminPanel.php';
+						}
+					});
+				}
+				else{
+					return false;
+				}
+			});
+		}
 	</script>

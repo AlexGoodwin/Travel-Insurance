@@ -312,6 +312,22 @@ header{
 							padding: 0 0 0 40px;
 							width: 70px;
 						}
+						
+						td.Received{
+							background: #EEE;
+							text-align: center;
+							border-left: 1px solid #888;
+						}
+						td.Contacted{
+							background: yellow;
+							text-align: center;
+							border-left: 1px solid #888;
+						}
+						td.Complete{
+							background: lime;
+							text-align: center;
+							border-left: 1px solid #888;
+						}
 					}
 					
 					tr:hover{
@@ -332,6 +348,22 @@ header{
 			form{
 				h2{
 					margin: 50px 0 50px $labelWidth;
+					width: 268px;
+					
+					a#delete{
+						display: inline-block;
+						border: 1px solid red;
+						color: red;
+						padding: 5px 10px;
+						float: right;
+						font-size: 1rem;
+					}
+					
+					a#delete:hover{
+						background: red;
+						color: white;
+						cursor: pointer;
+					}
 				}
 				
 				label{
@@ -342,7 +374,7 @@ header{
 					padding: 5px 20px 5px 0;
 				}
 				
-				input{
+				input, textarea{
 					display: block;
 					margin-bottom: 20px;
 					padding: 5px;
@@ -364,6 +396,7 @@ header{
 					border-radius: 0;
 					height: 34px;
 					-webkit-appearance: none;
+					margin-bottom: 20px;
 				}
 				
 				input[type=submit]{

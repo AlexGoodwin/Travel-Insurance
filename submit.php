@@ -3,7 +3,7 @@
 	include('common.php');
 	
 	if(isset($_POST['name'])){
-		$stmt = $db->prepare("INSERT INTO applications (name, email, phone, social, weight, address_line1, address_line2, city, state, zip, trip_start, trip_end) VALUES (:name, :email, :phone, :social, :weight, :address_line1, :address_line2, :city, :state, :zip, :trip_start, :trip_end)");
+		$stmt = $db->prepare("INSERT INTO applications (name, email, phone, social, weight, address_line1, address_line2, city, state, zip, trip_start, trip_end) VALUES (:name, :email, :phone, :social, :weight, :address_line1, :address_line2, :city, :state, :zip, :trip_start, :trip_end, :status)");
 		$stmt->bindParam(':name', $name);
 		$stmt->bindParam(':email', $email);
 		$stmt->bindParam(':phone', $phone);
@@ -16,6 +16,7 @@
 		$stmt->bindParam(':zip', $zip);
 		$stmt->bindParam(':trip_start', $trip_start);
 		$stmt->bindParam(':trip_end', $trip_end);
+		$stmt->bindParam(':status', $status);
 	
 		
 		// insert one row
@@ -31,6 +32,7 @@
 		$zip = $_POST['zip'];
 		$trip_start = $_POST['tripStart'];
 		$trip_end = $_POST['tripEnd'];
+		$status = 'Received';
 		$stmt->execute();
 	}
 	else{

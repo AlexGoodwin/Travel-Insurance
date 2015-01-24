@@ -209,6 +209,18 @@ header {
       .adminPanel section div.applications table tbody tr td:first-of-type {
         padding: 0 0 0 40px;
         width: 70px; }
+      .adminPanel section div.applications table tbody tr td.Received {
+        background: #EEE;
+        text-align: center;
+        border-left: 1px solid #888; }
+      .adminPanel section div.applications table tbody tr td.Contacted {
+        background: yellow;
+        text-align: center;
+        border-left: 1px solid #888; }
+      .adminPanel section div.applications table tbody tr td.Complete {
+        background: lime;
+        text-align: center;
+        border-left: 1px solid #888; }
     .adminPanel section div.applications table tbody tr:hover {
       background: rgba(0, 0, 0, 0.2);
       cursor: pointer; }
@@ -217,14 +229,26 @@ header {
   min-height: 700px;
   display: block; }
   .adminPanel section div.app form h2 {
-    margin: 50px 0 50px 160px; }
+    margin: 50px 0 50px 160px;
+    width: 268px; }
+    .adminPanel section div.app form h2 a#delete {
+      display: inline-block;
+      border: 1px solid red;
+      color: red;
+      padding: 5px 10px;
+      float: right;
+      font-size: 1rem; }
+    .adminPanel section div.app form h2 a#delete:hover {
+      background: red;
+      color: white;
+      cursor: pointer; }
   .adminPanel section div.app form label {
     min-width: 160px;
     float: left;
     clear: left;
     text-align: right;
     padding: 5px 20px 5px 0; }
-  .adminPanel section div.app form input {
+  .adminPanel section div.app form input, .adminPanel section div.app form textarea {
     display: block;
     margin-bottom: 20px;
     padding: 5px;
@@ -241,7 +265,8 @@ header {
     border: 1px solid #888;
     border-radius: 0;
     height: 34px;
-    -webkit-appearance: none; }
+    -webkit-appearance: none;
+    margin-bottom: 20px; }
   .adminPanel section div.app form input[type=submit] {
     text-align: center;
     background: #4a85d1;
