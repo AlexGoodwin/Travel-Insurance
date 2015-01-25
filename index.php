@@ -23,10 +23,10 @@
 		        <form class="grid-100" action="submit.php" method="post">
 			        <div class="grid-30 prefix-20">
 				        <label for="name">Name</label>
-				        <input type="text" name='name' placeholder="Name" required="required">
+				        <input type="text" name='name' id="name" placeholder="Name" required="required">
 				        
 				        <label for="email">Email</label>
-				        <input type="email" name='email' placeholder="Email" required="required">
+				        <input type="email" name='email' id="email" placeholder="Email" required="required">
 				        
 				        <label for="phone">Phone</label>
 				        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required="required">
@@ -35,23 +35,23 @@
 				        <input type="tel" id="ssn" name="ssn" placeholder="Social Security Number" pattern="\d{3}-?\d{2}-?\d{4}" required="required">
 				        
 				        <label for="weight">Weight</label>
-				        <input type="text" name='weight' placeholder="Weight (Lbs)" required="required">
+				        <input type="text" name='weight' id="weight" placeholder="Weight (Lbs)" required="required">
 				        
 				        <label for="address_line1">Mailing Address</label>
-				        <input type="text" name="address_line1" placeholder="Mailing Address" class="noMargin" required="required">
+				        <input type="text" name="address_line1" id="address_line1" placeholder="Mailing Address" class="noMargin" required="required">
 				        
 				        <label for="address_line2">Mailing Address (Line 2)</label>
-				        <input type="text" name="address_line2" placeholder="Mailing Address (Line 2)" >
+				        <input type="text" name="address_line2" id="address_line2" placeholder="Mailing Address (Line 2)" >
 				        
 				        <label for="city">City</label>
-				        <input type="text" name="city" placeholder="City" required="required">
+				        <input type="text" name="city" id="city" placeholder="City" required="required">
 				        
 						<div class="halfInput">				        
 					        <label for="state">State</label>
-					        <input type="text" name="state" placeholder="State" required="required">
+					        <input type="text" name="state" id="state" placeholder="State" required="required">
 					        
 					        <label for="zip">Zip</label>
-					        <input type="text" name="zip" placeholder="Zip" maxlength="5" required="required">
+					        <input type="text" name="zip" id="zip" placeholder="Zip" maxlength="5" required="required">
 						</div>
 			        </div>
 			        

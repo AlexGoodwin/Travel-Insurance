@@ -1,6 +1,6 @@
 <footer class="grid-60 prefix-20">
     <div class="grid-25 prefix-25">
-        <img src="http://placehold.it/100x50&text=VeriSign">
+        <img src="img/verisign.gif" alt="VeriSign Secured">
     </div>
     
     <div class="grid-25">
