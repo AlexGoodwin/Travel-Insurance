@@ -13,7 +13,8 @@
 	}
 	else{
 		echo '
-			<a href="adminPanel.php">Admin Panel</a>';
+			<a href="adminPanel.php">Admin Panel</a>
+			<a href="logout.php">Logout</a>';
 	}
 	?>
     

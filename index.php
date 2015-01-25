@@ -75,23 +75,7 @@
 			        <p>Your information is transmitted and stored over a secure, industry-standard https connection. Questions? <a href="#">Contact us</a> or view our <a href="#">privacy policy</a>.</p>
 		        </div>
 		        
-		        <footer class="grid-60 prefix-20">
-			        <div class="grid-25">
-				        <img src="http://placehold.it/100x50" alt='placeholder image'>
-			        </div>
-			        
-			        <div class="grid-25">
-				        <img src="http://placehold.it/100x50" alt='placeholder image'>
-			        </div>
-			        
-			        <div class="grid-25">
-				        <img src="http://placehold.it/100x50" alt='placeholder image'>
-			        </div>
-			        
-			        <div class="grid-25">
-				        <img src="http://placehold.it/100x50" alt='placeholder image'>
-			        </div>
-		        </footer>
+		        <? include('footer.php');?>
 			</section>
         </section>
 

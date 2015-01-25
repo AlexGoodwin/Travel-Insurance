@@ -63,25 +63,14 @@
         
         <section id="application">
 	        <section class="grid-container">
-		        <p>Your information has been submitted. Expect a call/email in no more than 48 business hours.</p>
+		        <div class="grid-60 prefix-20">
+			        <h1>Thank You!<img src="img/logo.png"></h1>
+			        <p>Your information has been submitted. Expect a call/email in no more than 48 business hours.</p>
+			        
+			        <p>Questions? <a href="#" title="Email Us">Contact us</a>.</p>
+		        </div>
 		        
-		        <footer class="grid-60 prefix-20">
-			        <div class="grid-25">
-				        <img src="http://placehold.it/100x50">
-			        </div>
-			        
-			        <div class="grid-25">
-				        <img src="http://placehold.it/100x50">
-			        </div>
-			        
-			        <div class="grid-25">
-				        <img src="http://placehold.it/100x50">
-			        </div>
-			        
-			        <div class="grid-25">
-				        <img src="http://placehold.it/100x50">
-			        </div>
-		        </footer>
+		        <? include('footer.php');?>
 			</section>
         </section>
 

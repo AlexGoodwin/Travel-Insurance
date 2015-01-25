@@ -7,11 +7,17 @@
 <!-- fancybox -->
 <script type="text/javascript" src="fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
 
-<script src="js/main.js"></script>
+<!-- <script src="js/main.js"></script> -->
+
+<!-- placeholder support -->
+<script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
 
 <!-- Date picker -->
 <script>
 	$(document).ready(function(){
+		//placeholder support
+		$('input, textarea').placeholder();
+		
 		//fancybox
 		$('.fancybox').fancybox({
 			padding: 0

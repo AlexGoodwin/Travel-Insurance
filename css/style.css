@@ -116,6 +116,18 @@ header {
   min-height: 500px;
   padding: 40px;
   text-align: center; }
+  #application section h1 {
+    text-align: left;
+    line-height: 83px;
+    height: 83px;
+    font-size: 3em;
+    clear: none; }
+    #application section h1 img {
+      display: inline-block;
+      float: right;
+      margin: 0 auto; }
+  #application section p {
+    text-align: left; }
   #application section img {
     margin-bottom: 20px; }
   #application section a {
@@ -161,11 +173,15 @@ header {
       background: #3966a0; }
   #application section div p {
     color: #888;
-    padding: 0 5px;
-    text-align: center; }
+    padding: 0 5px; }
   #application section footer {
     padding: 30px 0;
     text-align: center; }
+    #application section footer ul {
+      padding: 0;
+      margin: 0; }
+      #application section footer ul li {
+        list-style: none; }
 
 .adminPanel header {
   min-height: 100px;
@@ -288,7 +304,17 @@ header {
     min-height: 600px; }
     header h1 {
       padding-top: 40px;
-      margin-bottom: 20px; } }
+      margin-bottom: 20px; }
+
+  #application section h1 {
+    height: auto;
+    text-align: center; }
+    #application section h1 img {
+      display: block;
+      float: none;
+      margin: 0 auto; }
+  #application section p {
+    text-align: center; } }
 @media (max-width: 768px) {
   header nav {
     position: relative;
