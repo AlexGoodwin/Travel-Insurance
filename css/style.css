@@ -168,14 +168,14 @@ header {
     text-align: center; }
 
 .adminPanel header {
-  height: 100px;
-  min-height: 0;
+  min-height: 100px;
   background: #3966a0;
   color: white;
   text-shadow: none;
-  text-align: left; }
+  text-align: left;
+  padding: 0 40px; }
   .adminPanel header h1 {
-    padding: 0 40px;
+    padding: 0;
     margin: 0;
     font-size: 3em;
     line-height: 100px;
@@ -183,18 +183,21 @@ header {
     font-weight: 200; }
   .adminPanel header a {
     display: inline-block;
+    margin: 33px 10px 0 0;
     float: right;
-    margin: 33px 40px 0 0;
     color: white;
     border: 1px solid white;
-    padding: 5px 10px; }
+    padding: 5px 10px;
+    vertical-align: top; }
   .adminPanel header a:hover {
     background: #4a85d1; }
+.adminPanel section h3.select {
+  margin-top: 35px; }
 .adminPanel section div.applications {
   border: 1px solid #888;
   border-top: none;
   padding: 0;
-  max-height: 100%;
+  max-height: 80%;
   overflow-y: scroll;
   background: white; }
   .adminPanel section div.applications h2 {
@@ -311,6 +314,31 @@ header {
     .login header section div:nth-child(2) form input {
       margin: 20px auto; }
     .login header section div:nth-child(2) form input:first-of-type {
-      margin-top: 0; } }
+      margin-top: 0; }
+
+  .adminPanel header {
+    text-align: center; }
+    .adminPanel header h1 {
+      font-size: 2em;
+      line-height: 2em; }
+    .adminPanel header a {
+      float: none;
+      margin: 20px; }
+  .adminPanel section {
+    text-align: center; }
+    .adminPanel section h3.select i {
+      display: none; }
+    .adminPanel section div.app form h2 {
+      margin: 20px; }
+    .adminPanel section div.app form label {
+      display: block;
+      margin: 20px 0;
+      min-width: 0;
+      width: 100%;
+      text-align: left; }
+    .adminPanel section div.app form input, .adminPanel section div.app form select, .adminPanel section div.app form textarea {
+      width: 100%; }
+    .adminPanel section div.app form input[type=submit] {
+      margin: 20px 0; } }
 
 /*# sourceMappingURL=style.css.map */

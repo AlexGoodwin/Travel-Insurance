@@ -15,6 +15,11 @@
 <form class="grid-80 prefix-10" method='post' action="adminPanel.php">
 	<h2>Application ID: <? echo $results['id'];?> <a id="delete" title="Delete Application"><i class="fa fa-trash"></i></a></h2>
 	
+	<hr>
+	<label for="time">Received: </label>
+	<input type="text" name="time" value="<? echo $results['time'];?>">
+	<hr>
+	
 	<input type='hidden' name="id" value='<? echo $results['id'];?>'>
 	
 	<label for="name">Name: </label>
@@ -46,6 +51,16 @@
 	
 	<label for="zip">Zip: </label>
 	<input type="text" name="zip" value="<? echo $results['zip'];?>">
+	
+	<hr>
+	
+	<label for="trip_start">Trip Start: </label>
+	<input type="text" name="trip_start" value="<? echo date('m/d/Y', strtotime(str_replace("-", "/", $results['trip_start'])));?>">
+	
+	<label for="trip_end">Trip End: </label>
+	<input type="text" name="trip_end" value="<? echo date('m/d/Y', strtotime(str_replace("-", "/", $results['trip_end'])));?>">
+	
+	<hr>
 	
 	<label for="status">Status: </label>
 	<select name="status">

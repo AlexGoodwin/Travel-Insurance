@@ -33,8 +33,8 @@
 		$city = $_POST['city'];
 		$state = $_POST['state'];
 		$zip = $_POST['zip'];
-		$trip_start = $_POST['tripStart'];
-		$trip_end = $_POST['tripEnd'];
+		$trip_start = date('Y-m-d', strtotime(str_replace('/', '-', $_POST['tripStart'])));
+		$trip_end = date('Y-m-d', strtotime(str_replace('/', '-', $_POST['tripEnd'])));
 		$status = $_POST['status'];
 		
 		$result = $stmt->execute(); 

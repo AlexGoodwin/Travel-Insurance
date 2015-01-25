@@ -1,8 +1,18 @@
 <?
-	$username = "root"; 
-    $password = "root"; 
-    $host = "localhost"; 
-    $dbname = "xsi";
+	// These variables define the connection information for your MySQL database
+    if($_SERVER['HTTP_HOST'] == 'localhost:8888'){
+		$username = "root"; 
+	    $password = "root"; 
+	    $host = "localhost"; 
+	    $dbname = "xsi";     
+    }
+
+	else{
+		$username = "alexpnqo"; 
+	    $password = "OKRL2XdPSm1vn";
+	    $host = "localhost"; 
+	    $dbname = "alexpnqo_xsi";
+	}
    
     // UTF-8 is a character encoding scheme that allows you to conveniently store 
     // a wide varienty of special characters, like ¢ or €, in your database. 
@@ -32,7 +42,7 @@
         // Note: On a production website, you should not output $ex->getMessage(). 
         // It may provide an attacker with helpful information about your code 
         // (like your database username and password). 
-        die("Failed to connect to the database: " . $ex->getMessage()); 
+        //die("Failed to connect to the database: " . $ex->getMessage()); 
     } 
      
     // This statement configures PDO to throw an exception when it encounters 

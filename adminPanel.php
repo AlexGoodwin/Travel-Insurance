@@ -7,7 +7,12 @@
 		$optionQuery = '';
 		
 		foreach($_POST as $key => $value){
-			$optionQuery .= $key . "= '".$value."', ";
+			// format dates correctly
+			if($key == 'trip_start' || $key == 'trip_end'){
+				$value = date('Y-m-d', strtotime($value));
+			}
+
+			$optionQuery .= $key . "= '".$value."', ";				
 		}
 		
 		// remove that trailing comma in query
@@ -19,6 +24,7 @@
 			WHERE id = $_POST[id]
 		";
 		
+		//echo $query;
 		$stmt = $db->prepare($query); 
         $result = $stmt->execute(); 
 	}
@@ -28,6 +34,7 @@
 	<header class="">
 		<h1>Agent Admin Panel</h1>
 		<a href="logout.php"><i class="fa fa-sign-out"> Log Out</i></a>
+		<a href="index.php"><i class="fa fa-tablet"> Application</i></a>
 	</header>
 	
 	<section class="">
@@ -62,7 +69,8 @@
 		</div>
 		
 		<div class="grid-70 app">
-			
+			<h2>Welcome, <? echo $_SESSION['user']['username'];?></h2>
+			<h3 class="select"><i class="fa fa-angle-left"></i> Select an Application</h3>
 		</div>
 		
 	</section>

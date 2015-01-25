@@ -257,15 +257,15 @@ header{
 
 .adminPanel{
 	header{
-		height: 100px;
-		min-height: 0;
+		min-height: 100px;
 		background: $dark_highlight;
 		color: white;
 		text-shadow: none;
 		text-align: left;
+		padding: 0 40px;
 		
 		h1{
-			padding: 0 40px;
+			padding: 0;
 			margin: 0;
 			font-size: 3em;
 			line-height: 100px;
@@ -275,11 +275,12 @@ header{
 		
 		a{
 			display: inline-block;
+			margin: 33px 10px 0 0;
 			float: right;
-			margin: 33px 40px 0 0;
 			color: white;
 			border: 1px solid white;
 			padding: 5px 10px;
+			vertical-align: top;
 		}
 		
 		a:hover{
@@ -288,11 +289,15 @@ header{
 	}
 	
 	section{
+		h3.select{
+			margin-top: 35px;
+		}
+		
 		div.applications{
 			border: 1px solid #888;
 			border-top: none;
 			padding: 0;
-			max-height: 100%;
+			max-height: 80%;
 			overflow-y: scroll;
 			background: white;
 			
@@ -434,6 +439,7 @@ header{
 	
 }
 
+// mobile
 @media (screen and max-width: 768px){
 	header{
 		
@@ -485,6 +491,54 @@ header{
 						input:first-of-type{
 							margin-top: 0;
 						}
+					}
+				}
+			}
+		}
+	}
+	
+	.adminPanel{
+		header{
+			text-align: center;
+			
+			h1{
+				font-size: 2em;
+				line-height: 2em;
+			}
+			a{
+				float: none;
+				margin: 20px;
+			}
+		}
+		
+		section{
+			text-align: center;
+			
+			h3.select i{
+				display: none;
+			}
+			
+			div.app{
+				
+				form{
+					h2{
+						margin: 20px;
+					}
+					
+					label{
+						display: block;
+						margin: 20px 0;
+						min-width: 0;
+						width: 100%;
+						text-align: left;
+					}
+					
+					input, select, textarea{
+						width: 100%;
+					}
+					
+					input[type=submit]{
+						margin: 20px 0;	
 					}
 				}
 			}
