@@ -1,6 +1,6 @@
 <?
 	// These variables define the connection information for your MySQL database
-    if($_SERVER['HTTP_HOST'] == 'localhost:8888'){
+    if($_SERVER['HTTP_HOST'] == 'localhost:8888' || $_SERVER['HTTP_HOST'] == 'alexgoodwinmedia.ngrok.com'){
 		$username = "root"; 
 	    $password = "root"; 
 	    $host = "localhost"; 

@@ -6,7 +6,7 @@
     <div class="grid-25">
         <ul>
 	        <li><a href="#">Privacy Policy</a></li>
-	        <li><a href="http://www.xsicolorado.com">XSI Colorado</a></li>
+	        <li><a href="#">Terms &amp; Condition</a></li>
         </ul>
     </div>
 </footer>

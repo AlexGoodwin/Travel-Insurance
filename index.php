@@ -11,7 +11,7 @@
 	        <? include('nav.php');?>
 	        
 			<h1>Traveling? Get Insured.</h1>
-			<h2>Get a fast & easy quote from an XSI agent.</h2>
+			<h2>Get a fast & easy quote from an agent.</h2>
 			
 			<a href="#application" class="scrollDown"></a>
 			<div class="darker"></div>
@@ -19,7 +19,7 @@
         
         <section id="application">
 	        <section class="grid-container">
-		        <img src="img/logo.png" alt="XSI logo">
+		        <img src="http://placehold.it/200x100&text=Logo" alt="placeholder">
 		        <form class="grid-100" action="submit.php" method="post">
 			        <div class="grid-30 prefix-20">
 				        <label for="name">Name</label>
